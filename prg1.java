@@ -1,19 +1,20 @@
-package Looping;
+package Numberbased;
 
-import java.util.Scanner;
 public class prg1 {
 
 	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-		System.out.println("enter value");
-		int n=sc.nextInt();
-		System.out.print("Output:");
-		for(int i=1;i<=n;i++)
-		{
-			System.out.print(+i+"\t");
-		}
+int num = 1234; // Sample Input
+        
+        // Handle the case if the number is 0
+        if (num == 0) {
+            System.out.print(0);
+        }
 
-		
+        while (num > 0) {
+            int digit = num % 10;      // Get the last digit
+            System.out.print(digit + " "); // Print it
+            num = num / 10;            // Remove the last digit
+        }
 
 	}
 
