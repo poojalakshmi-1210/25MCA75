@@ -1,32 +1,35 @@
-package Numberbased;
+package Looping;
+
+import java.util.Scanner;
 
 public class prg8 {
 
 	public static void main(String[] args) {
-		int num = 2375; // Sample Input
-        String result = "";
-        boolean foundPrime = false;
+		// TODO Auto-generated method stub
+//		8. Check Prime Number
+//		   Sample Input: 17
+//		   Sample Output: Prime
 
-        // Use a temporary variable to keep the original num intact if needed
-        int temp = Math.abs(num);
-
-        while (temp > 0) {
-            int digit = temp % 10;
-            
-            // Prime digits are 2, 3, 5, 7
-            if (digit == 2 || digit == 3 || digit == 5 || digit == 7) {
-                // Prepend to string to keep original order
-                result = digit + " " + result;
-                foundPrime = true;
-            }
-            temp /= 10;
-        }
-
-        if (foundPrime) {
-            System.out.println("Prime Digits: " + result.trim());
-        } else {
-            System.out.println("Prime Digits: None");
-        }
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter input:");
+		int n=sc.nextInt();
+		int c=0;
+		for(int i=1;i<=n;i++)
+		{
+			if(i%1==0)
+			{
+				c++;
+			}
+		}
+		if(c==2)
+		{
+			System.out.println("output: prime");
+		}
+		else
+		{
+			System.out.println("output: prime");
+		}
+		
 
 	}
 
